@@ -1,3 +1,4 @@
+#!/bin/bash
 source config.sh
 # Part 1
 cd /WORKDIR/cnv_calling_QC_association/code

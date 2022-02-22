@@ -1,3 +1,4 @@
+#!/bin/bash
 source config.sh
 # Part 2
 # run iPattern
