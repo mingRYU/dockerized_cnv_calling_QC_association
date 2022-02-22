@@ -1,5 +1,5 @@
 #!/bin/bash
-source config.sh
+source /WORKDIR/config.sh
 
 # Part 3
 cd /WORKDIR/cnv_calling_QC_association/code/

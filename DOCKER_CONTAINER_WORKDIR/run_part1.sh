@@ -1,5 +1,5 @@
 #!/bin/bash
-source config.sh
+source /WORKDIR/config.sh
 # Part 1
 cd /WORKDIR/cnv_calling_QC_association/code
 perl 01_01_signalDensity_samplelist.pl  ${COHORT_NAME}   /WORKDIR/data/${REPORT_FILE_NAME}    /WORKDIR/data/${PHENOTYPE_FILE_NAME}  /WORKDIR/   /WORKDIR/

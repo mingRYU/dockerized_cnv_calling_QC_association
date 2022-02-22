@@ -1,5 +1,5 @@
 #!/bin/bash
-source config.sh
+source /WORKDIR/config.sh
 # Part 2
 # run iPattern
 cd /WORKDIR/ipn_0.582/preprocess/ilmn/
