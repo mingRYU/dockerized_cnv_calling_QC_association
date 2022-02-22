@@ -1,5 +1,3 @@
-# FROM romanhaa/penncnv
-# FROM umichbfxcore/ipattern:manual
 FROM python:2
 
 RUN apt-get update && \

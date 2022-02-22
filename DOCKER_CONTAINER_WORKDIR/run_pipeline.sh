@@ -30,7 +30,7 @@ perl /WORKDIR/PennCNV/detect_cnv.pl \
     -listfile /WORKDIR/penn/${COHORT_NAME}/data_aux/samplelist \
     -confidence \
     -log /WORKDIR/penn/${COHORT_NAME}/out/sample.log \
-    -out /WORKDIR/penn/${COHORT_NAME}/out/sample.txt
+    -out /WORKDIR/penn/${COHORT_NAME}/out/sample.rawcnv
 
 
 # Part 3
