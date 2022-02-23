@@ -1,4 +1,4 @@
 COHORT_NAME=Ma_xajd
-REPORT_FILE_NAME=finalreport.txt
+REPORT_FILE_NAME=finalreport.all.txt
 PHENOTYPE_FILE_NAME=MA.phe
 COHORT_LIST_FILE_NAME=cohort.list
