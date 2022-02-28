@@ -16,8 +16,8 @@ Dockerized pipeline from: https://github.com/QidiFeng/cnv_calling_QC_association
     STEP3: <br/>`docker run -d --mount type=bind,source="$(pwd)"/DOCKER_CONTAINER_WORKDIR,target=/WORKDIR cnv_pipeline bash /WORKDIR/run_step3.sh`<br/>
 
 ### Notes for running `run_step2.sh`:
-Before running `run_step2.sh`, you must modify `$subset_code` in `run_step2.sh` to `aa`, `ab`, `ac`, etc. <br/> 
+Before running `run_step2.sh`, you must set `$subset_code` in `run_step2.sh` to `aa`, `ab`, `ac`, etc, where `aa` represents 1, `ab` represents 2, `ac` represents 3 , and so on.<br/> 
 
-`aa`, `ab`, `ac`, etc represents different subsets of your cohort(because iPattern requires each batch to have >=100 and <=300 samples, your cohort will be splitted into different subsets, which is what `run_step1.sh` does). You can find the subset lists(named as sublistaa, sublistab, etc) which have been generated after finished running `run_step1.sh` under `DOCKER_CONTAINER_WORKDIR/ipn/$COHORT_NAME/data_aux/` , where `aa` means subset #1, `ab` means subset #2, etc. <br/>
+`aa`, `ab`, `ac`, etc represents different subsets of your cohort(because iPattern requires each batch to have >=100 and <=300 samples, your cohort will be splitted into different subsets, which is what `run_step1.sh` does). You can find the subset lists(named as sublistaa, sublistab, etc) which have been generated after finished running `run_step1.sh` under `DOCKER_CONTAINER_WORKDIR/ipn/${COHORT_NAME}/data_aux/`<br/>
 
 In other words, if after running `run_step1.sh`, there were 3 subsets generated for your cohort -- `aa`, `ab`, `ac` -- then you need to execute `run_part2.sh` 3 times, each time with a different $subset_code(i.e `aa`, `ab`, `ac`). They can be ran in parallel, but make sure that they are all finished before moving on to `run_step3.sh`.
