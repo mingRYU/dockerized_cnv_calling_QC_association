@@ -27,4 +27,4 @@ bash 02_0_CNVcombine_QC.sh $ipn_dir $penn_dir $out_dir $cohort_list $chromosome_
 
 
 # CNVburden calculation
-Rscript 03_1_cnvburden.r /WORKDIR $out_dir/02_11_plinked $gene_file $output $phenofile
+Rscript 03_1_cnvburden.r /WORKDIR $out_dir/02_11_plinked $gene_file $phenofile
