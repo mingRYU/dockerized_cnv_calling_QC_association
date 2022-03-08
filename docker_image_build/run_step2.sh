@@ -1,8 +1,6 @@
 #!/bin/bash
 source /WORKDIR/config.sh
 
-subset_code=aa   # <--- change this to "aa", "ab", "ac", "ad", etc, to run this step on different subsets 
-
 # run iPattern
 cd /software/ipn_0.582/preprocess/ilmn/
 export IPNBASE=/software/ipn_0.582
