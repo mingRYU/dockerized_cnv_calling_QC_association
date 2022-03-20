@@ -9,10 +9,10 @@ Dockerized pipeline from: https://github.com/QidiFeng/cnv_calling_QC_association
     The Dockerfile and other files needed to build the image are in `./docker_image_build`. Alternative, to build docker image from Dockerfile: <br/> `docker build -t cnv_calling docker_image_build/`
 4. Move all the input files into `DOCKER_CONTAINER_WORKDIR/data` directory and modify the variables in `config.sh` so that these variables correspond to the file names for your input files <br/>(NOTE that the pipeline scripts assumes all input files are under the `DOCKER_CONTAINER_WORKDIR/data` directory).
 5. Run pipeline scripts inside a Docker container with `./DOCKER_CONTAINER_WORKDIR` directory mounted: <br/> 
-    STEP1: <br/>`docker run -d --mount type=bind,source="$(pwd)"/DOCKER_CONTAINER_WORKDIR,target=/WORKDIR mingrayyu/cnv_calling bash /scripts/run_step3.sh`<br/>
+    STEP1: <br/>`docker run -d --mount type=bind,source="$(pwd)"/DOCKER_CONTAINER_WORKDIR,target=/WORKDIR mingrayyu/cnv_calling bash /scripts/run_step1.sh`<br/>
     
     Check below **Notes for running run_step2.sh** before running step2 <br/>
-    STEP2: <br/>`docker run -d --mount type=bind,source="$(pwd)"/DOCKER_CONTAINER_WORKDIR,target=/WORKDIR mingrayyu/cnv_calling bash /scripts/run_step3.sh`<br/>
+    STEP2: <br/>`docker run -d --mount type=bind,source="$(pwd)"/DOCKER_CONTAINER_WORKDIR,target=/WORKDIR mingrayyu/cnv_calling bash /scripts/run_step2.sh`<br/>
     
     STEP3: <br/>`docker run -d --mount type=bind,source="$(pwd)"/DOCKER_CONTAINER_WORKDIR,target=/WORKDIR mingrayyu/cnv_calling bash /scripts/run_step3.sh`<br/>
 
